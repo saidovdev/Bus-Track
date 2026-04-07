@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:5000'], 
+  origin: ['https://bus-track-w81v.onrender.com', 'https://bus-track-w81v.onrender.com'], 
   credentials: true
 }));
 
