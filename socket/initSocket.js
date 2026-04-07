@@ -2,12 +2,16 @@ import { Server } from "socket.io";
 import driver from '../models/driverModels.js'
 let io;
 
+
 export const initSocket = (server) => {
   io = new Server(server, {
     cors: {
-      origin: "*",
+      origin: "*", // Hamma domendan qabul qilish (Render uchun qulay)
       credentials: true
-    }
+    },
+    // 🔥 BU QISMNI QO'SHING:
+    transports: ['websocket', 'polling'],
+    allowEIO3: true
   });
 
 const drivers = {};
